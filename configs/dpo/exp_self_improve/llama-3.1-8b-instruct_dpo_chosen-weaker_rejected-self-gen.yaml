@@ -2,7 +2,7 @@ apply_chat_template: true
 beta: 5
 bf16: true
 chosen_key: llama-3.2-3b-instruct
-dataset: /weka/prior-default/scottg/paired/adhoc_data/tulu3_sft-mix_en_single-turn_model_ladder
+dataset: scottgeng00/delta_learning_tulu3-sft-mix_model_ladder
 dataset_probs: 1.0
 dpo_loss_type: dpo_norm
 flash_attn: true

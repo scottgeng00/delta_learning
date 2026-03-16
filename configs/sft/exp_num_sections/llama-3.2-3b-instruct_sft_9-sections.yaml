@@ -1,6 +1,6 @@
 apply_chat_template: true
 bf16: true
-dataset: /mmfs1/home/sgeng/pkohlab/sgeng/revision/train_data/paired_data/tulu3-bold-sections/tulu3_bold-sections_train_hface
+dataset: scottgeng00/delta_learning_num_sections
 dataset_probs: 1.0
 flash_attn: true
 gradient_checkpointing: true

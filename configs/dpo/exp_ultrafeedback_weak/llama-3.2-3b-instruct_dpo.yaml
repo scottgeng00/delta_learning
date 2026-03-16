@@ -2,7 +2,7 @@ apply_chat_template: true
 beta: 5
 bf16: true
 chosen_key: chosen
-dataset: /mmfs1/home/sgeng/pkohlab/sgeng/revision/train_data/paired_data/ultrafeedback-weak/ultrafeedback-binarized-preferences-cleaned_no-strong-models
+dataset: scottgeng00/delta_learning_ufweak
 dataset_probs: 1.0
 dpo_loss_type: dpo_norm
 flash_attn: true

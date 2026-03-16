@@ -1,6 +1,6 @@
 apply_chat_template: true
 bf16: true
-dataset: /weka/prior-default/scottg/paired/adhoc_data/ultrafeedback-binarized-preferences-cleaned_no-strong-models
+dataset: scottgeng00/delta_learning_ufweak
 dataset_probs: 1.0
 flash_attn: true
 gradient_checkpointing: true

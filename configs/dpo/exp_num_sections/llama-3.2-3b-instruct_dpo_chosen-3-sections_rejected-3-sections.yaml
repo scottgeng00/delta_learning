@@ -2,7 +2,7 @@ apply_chat_template: true
 beta: 5
 bf16: true
 chosen_key: chosen
-dataset: /mmfs1/home/sgeng/pkohlab/sgeng/revision/train_data/paired_data/tulu3-bold-sections/v2_random_test_split/tied_data/tulu3_bold_sections_train_ties_3-secs_v2.json
+dataset: scottgeng00/delta_learning_num_sections_3section_tied
 dataset_probs: 1.0
 dpo_loss_type: dpo_norm
 flash_attn: true
