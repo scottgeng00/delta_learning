@@ -39,7 +39,9 @@ Experiment configs are organized under `configs/dpo/` and `configs/sft/`:
 
 ## Data
 
-All datasets are available on HuggingFace:
+Delta learning makes post-training data generation simple: take any prompt mix, pass it through models of different capability levels, and use the stronger model's responses as chosen and the weaker model's as rejected. We provide `scripts/generate_model_ladder_data.py` as a simple example.
+
+All datasets used in our experiments are available on HuggingFace:
 
 | Dataset | Used in |
 |---|---|
