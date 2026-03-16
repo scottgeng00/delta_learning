@@ -1,0 +1,14 @@
+# Example: run DPO training with a single config
+python scripts/launch_dpo_with_yaml.py \
+    --train_yaml_path configs/dpo/exp_posttrain/tulu3-8b-sft_dpo_chosen-qwen-2.5-3b-instruct_rejected-qwen-2.5-1.5b-instruct.yaml \
+    --num_gpus 8 --deepspeed_stage 2
+
+# Example: run SFT training with a single config
+python scripts/launch_sft_with_yaml.py \
+    --train_yaml_path configs/sft/exp_analysis_qwen_ladder/tulu3-8b-sft_sft_qwen-2.5-3b-instruct.yaml \
+    --num_gpus 8 --deepspeed_stage 2
+
+# Example: run DPO training with all configs in a folder, one config at a time
+python scripts/launch_dpo_with_yaml.py \
+    --train_yaml_path configs/dpo/exp_posttrain \
+    --num_gpus 8 --deepspeed_stage 2

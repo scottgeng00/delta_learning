@@ -1,0 +1,41 @@
+# model configs
+pretrain: meta-llama/Llama-3.1-8B-Instruct
+save_path: sft/base_lora
+
+# dataset configs
+dataset: allenai/tulu-v2-sft-mixture
+dataset_probs: 1.0
+max_len: 2048
+apply_chat_template: true
+train_split: train
+input_key: messages
+
+# lora configs
+lora_rank: 256
+lora_alpha: 512
+lora_dropout: 0.1
+
+# wandb configs
+use_wandb: 'yes'
+wandb_project: 'openrlhf_train_sft'
+
+# training configs
+max_epochs: 2
+micro_train_batch_size: 2
+train_batch_size: 256
+
+# optimizer configs
+learning_rate: 5e-6
+lr_warmup_ratio: 0.03
+lr_scheduler: cosine_with_min_lr
+l2: 0 # weight decay
+
+# ckpt saving
+save_steps: 20
+load_checkpoint: true
+
+# memory optimizations
+gradient_checkpointing: true
+bf16: true
+flash_attn: true
+zero_stage: 1

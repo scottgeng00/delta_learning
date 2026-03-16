@@ -1,0 +1,47 @@
+# model configs
+pretrain: meta-llama/Llama-3.1-8B-Instruct
+save_path: dpo/base_lora
+
+# dataset configs
+dataset: allenai/llama-3.1-tulu-3-8b-preference-mixture
+dataset_probs: 1.0
+max_len: 2048
+apply_chat_template: true
+train_split: train
+chosen_key: chosen
+rejected_key: rejected
+
+# lora configs
+lora_rank: 256
+lora_alpha: 512
+lora_dropout: 0.1
+
+# wandb configs
+use_wandb: 'yes'
+wandb_project: 'openrlhf_train_dpo'
+
+# training configs
+max_epochs: 1
+micro_train_batch_size: 1
+train_batch_size: 32
+
+# optimizer configs
+learning_rate: 5e-7
+lr_warmup_ratio: 0.03
+lr_scheduler: cosine_with_min_lr
+l2: 0 # weight decay
+
+# dpo configs
+dpo_loss_type: dpo_norm
+beta: 5
+
+# ckpt saving
+save_steps: 40
+load_checkpoint: true
+max_ckpt_num: 1
+
+# memory optimizations
+gradient_checkpointing: true
+bf16: true
+flash_attn: true
+zero_stage: 1
